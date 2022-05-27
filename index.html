@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник про котиков</title>
+    <style>
+        input:required:valid {
+            border-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Опрос для владельцев</h1>
+    <form class="catForm">
+
+        <div>
+            <input type="text" id="petname" name="petname" placeholder="Кличка питомца" required>*
+        </div>
+        <br />
+
+        <div>
+            <input type="number" max="10" min="1" name="weight" placeholder="Вес" required>*
+        </div>
+        <br />
+
+        <fieldset>
+            <legend>Информация о владельце</legend><br>
+            <div>
+                <input type="text" id="name" name="firstname" placeholder="Имя" required>*
+            </div>
+            <br />
+
+            <div>
+                <input type="text" id="surname" name="surname" placeholder="Фамилия" required>*
+            </div>
+            <br />
+
+            <div>
+                <input type="tel" id="phone" name="tel" placeholder="Телефон"
+                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>*
+            </div>
+            <br />
+
+            <div>
+                <input type="email" id="email" name="email" placeholder="e-mail" required>*
+            </div>
+        </fieldset>
+        <br />
+
+        <fieldset>
+            <legend>Чем питается Ваш питомец?</legend>
+            <input type="checkbox" name="feed" value="dry" />
+            сухой корм <br />
+            <input type="checkbox" name="feed" value="wet" />
+            влажный корм <br />
+            <input type="checkbox" name="feed" value="natural" />
+            натуральный корм <br />
+        </fieldset>
+        <br />
+
+        <p>Дополнительные сведения:*</p>
+        <div>
+            <textarea rows="6" cols="100" minlength="10" maxlength="100" placeholder="Комментарий владельца"
+                name="comments" required>
+            </textarea>
+        </div>
+
+        <div>
+            <button class="postButton" type="submit"> Сохранить</button>
+        </div>
+    </form>
+    <script src="./assets/scripts/index.js"></script>
+</body>
+
+</html>
