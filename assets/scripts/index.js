@@ -18,12 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //А это почему-то не работает:(
-    // catForm.addEventListener("sumbit", postForm);
+    // catForm.addEventListener("submit", postForm);
 
     // function postForm(event) {
     //     event.preventDefault();
     //     fetch("https://httpbin.org/post", {
     //             method: `POST`,
+    //             // headers: {
+    //             //     'Content-Type': 'multipart/form-data'
+    //             // },
     //             body: new FormData(catForm),
     //         })
     //         .then(response => response.json())
